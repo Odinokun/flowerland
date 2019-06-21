@@ -12,5 +12,5 @@ module.exports = [
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 
   // include fullpage
-  './node_modules/fullpage.js/dist/fullpage.css'
+  './node_modules/fullpage.js/dist/fullpage.min.js'
 ];
