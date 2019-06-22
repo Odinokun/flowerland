@@ -1,0 +1,29 @@
+//begin menu
+.menu#menu
+  .menu__inn
+    nav.menu-nav
+      ul.menu-nav__list
+        li.menu-nav__item.active
+          a(href="#").menu-nav__link Weddings
+        li.menu-nav__item
+          a(href="#").menu-nav__link Special Events
+        li.menu-nav__item
+          a(href="#").menu-nav__link Social Occasions
+        li.menu-nav__item
+          a(href="#").menu-nav__link Daily Flower Order + Delivery
+        li.menu-nav__item
+          a(href="#").menu-nav__link About us
+        li.menu-nav__item
+          a(href="#").menu-nav__link Contact us
+        li.menu-nav__item.menu-nav__item--schedule
+          a(href="#").menu-nav__link Schedule a Consultation
+    .menu-contacts
+      a(href="tel:+13472726720").menu-contacts__item
+        .menu-contacts__icon
+          +svg('phone')
+        span.menu-contacts__text +1 347 272 6720
+      a(href="mailto:info@flowerlanddecor.com").menu-contacts__item
+        .menu-contacts__icon
+          +svg('mail')
+        span.menu-contacts__text info@flowerlanddecor.com
+//end   menu

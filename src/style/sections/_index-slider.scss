@@ -1,0 +1,262 @@
+.index-slider__slide {
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.index-slider__slide-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.index-slider__logo {
+  position: absolute;
+  top: 60px;
+  left: 120px;
+
+  @include max(1280) {
+    left: 150px;
+  }
+  @include max(1020) {
+    left: 90px;
+  }
+  @include max(576) {
+    left: 80px;
+  }
+  #logo-pic {
+    fill: #d1e5e4;
+  }
+  #logo-text {
+    fill: #fff;
+  }
+}
+
+.index-slider__slide--white {
+  .index-slider__logo {
+    #logo-text {
+      fill: #2f2d2d;
+    }
+  }
+  .index-slider__slide-bg {
+    background-position: 100% 50%;
+  }
+}
+
+.index-slider__title {
+  font-family: $font-title;
+  font-size: 80px;
+  line-height: 80px;
+  width: 100%;
+  margin-bottom: 70px;
+  color: #fff;
+
+  @include max(1020) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  @include max(576) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.index-slider__scroll {
+  position: relative;
+  width: 19px;
+  height: 137px;
+  span {
+    font-family: $font-bb;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: block;
+    width: 19px;
+    height: 82px;
+    transform: rotate(-90deg);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d1e5e4;
+  }
+  svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    fill: #d1e5e4;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    transform: rotate(90deg);
+  }
+}
+
+.onepage-pagination {
+  z-index: 15;
+  right: auto;
+  left: 60px;
+  transform: translateY(-50%);
+
+  @include max(1020) {
+    left: 23px;
+  }
+  @include maxHeight(800) {
+    top: 150px;
+    transform: translateY(0%);
+  }
+  @include maxHeight(740) {
+    display: none;
+  }
+  li {
+    width: 12px;
+    height: 12px;
+    margin: 0 0 35px 0;
+    padding: 0;
+    a {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      transition: .2s;
+      transform: scale(.7);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background-color: transparent;
+
+      will-change: transform;
+      &::before {
+        display: none;
+      }
+      &:hover,
+      &.active {
+        width: 12px;
+        height: 12px;
+        transform: scale(1);
+        border: 2px solid #d1e5e4;
+        background-color: #d1e5e4;
+      }
+    }
+  }
+}
+
+.onepage-pagination.purple {
+  li a {
+    border: 2px solid #b3867c;
+    &:hover,
+    &.active {
+      border: 2px solid #b3867c;
+      background-color: #b3867c;
+    }
+  }
+}
+
+.index-slider__inst-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  svg {
+    flex: none;
+    fill: #2f2d2d;
+    width: 50px;
+    height: 50px;
+    margin-right: 35px;
+
+    @include max(576) {
+      width: 35px;
+      height: 35px;
+      margin-right: 20px;
+    }
+    @include max(375) {
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+    }
+  }
+  span {
+    font-family: $font-bsb;
+    font-size: 35px;
+    color: #2f2d2d;
+
+    @include max(576) {
+      font-size: 28px;
+    }
+    @include max(375) {
+      font-size: 22px;
+    }
+  }
+}
+
+.index-slider__slide--inst {
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    //flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.index-slider__inst-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  height: 240px;
+  margin: auto;
+
+  @include max(960) {
+    top: auto;
+    bottom: 60px;
+    height: auto;
+    padding-left: 60px;
+  }
+}
+
+.index-slider__inst-item {
+  overflow: hidden;
+  width: 100%;
+  max-width: 240px;
+
+  @include max(1740) {
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+  @include max(1280) {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @include max(960) {
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: block;
+    }
+  }
+  @include max(576) {
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
