@@ -7,5 +7,8 @@ module.exports = [
   './node_modules/slick-carousel/slick/slick.css',
 
   // include fancybox3
-  './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+  './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+
+  // include onepage-scroll
+  './src/vendors/onepage-scroll.css'
 ];

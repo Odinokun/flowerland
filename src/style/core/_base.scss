@@ -3,23 +3,27 @@
 *::after {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: $font;
   font-size: 16px;
   line-height: 1.38;
   color: $text;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
 }
+
 h1,
 h2,
 h3,
@@ -30,36 +34,44 @@ p {
   font-weight: 400;
   margin: 0 0 10px 0;
 }
+
 h1 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 36px;
 }
+
 h2 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 32px;
 }
+
 h3 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 28px;
 }
+
 h4 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 24px;
 }
+
 h5 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 22px;
 }
+
 h6 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-size: 20px;
 }
+
 p {
   font-size: 16px;
   strong {
-    font-family: $font-bold;
+    font-family: $font-bb;
   }
 }
+
 a {
   transition: color .5s;
   color: $highlight;
@@ -68,18 +80,21 @@ a {
     color: $highlight-hov;
   }
 }
+
 ol,
 ul {
   li {
     padding: 3px 0;
   }
 }
+
 ul {
   li {
     // путь к кастомной картинке пункта ul
     // list-style-image: url('../img/ul.png');
   }
 }
+
 //кастомные пункты списка с цифрами
 ol {
   // list-style: none;
@@ -88,6 +103,7 @@ ol {
     // color: $brand;
   }
 }
+
 input,
 textarea,
 select,
@@ -95,6 +111,7 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
+
 input {
   padding: 3px 10px 5px 10px;
   color: $text;
@@ -103,67 +120,140 @@ input {
     @include placeholder-color($text);
   }
 }
+
 textarea {
   resize: none;
 }
+
 input.error,
 textarea.error {
   border-color: #ed1b24 !important;
   background: #fbd1d3 !important;
 }
+
 svg {
   display: block;
   overflow: visible;
 }
+
 //изменяем цвет выделения текста мышью
 ::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
+  background-color: $brand;
+  text-shadow: none;
 }
 
-
 .main-wrap {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
   &.no-scroll {
     overflow: hidden;
   }
 }
+
 .main {
   flex-grow: 1;
 }
-
 
 .container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 10px 30px 10px 130px;
+  @include max(1280) {
+
+  padding: 10px 30px 10px 160px;
+  }
+  @include max(1020) {
+  padding: 10px 30px 10px 100px;
+
+  }
+  @include max(576) {
+  padding: 10px 15px 10px 80px;
+
+  }
 
   @include max(768) {
-    padding: 10px 20px;
+    //padding: 10px 20px;
   }
   @include max(425) {
-    padding: 10px;
+    //padding: 10px;
   }
 }
 
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none
-}
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height: 60px;
+  padding: 0 74px 0 42px;
+  cursor: pointer;
+  @include max(1020) {
+    height: 50px;
+  }
+  @include max(576) {
+  padding: 0 50px 0 20px;
 
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
+  }
+  &:hover {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    content: '';
+    transition: transform .5s;
+    transform: translateX(-56%);
+    background-color: #b3867c;
+
+    will-change: transform;
+    @include max(1020) {
+      height: 50px;
+    }
+  }
+  a,
+  button,
+  input {
+    font-family: $font-bb;
+    font-size: 14px;
+    line-height: 60px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d1e5e4;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    @include max(1020) {
+      line-height: 50px;
+    }
+    @include max(576) {
+      font-size: 10px;
+    }
+  }
+  svg {
+    position: absolute;
+    right: 42px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 16px;
+    fill: #d1e5e4;
+    width: 16px;
+    height: 16px;
+    @include max(576) {
+      right: 20px;
+    }
+  }
 }
