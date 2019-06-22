@@ -1,0 +1,47 @@
+mixin reviews-slider__slide(pic, name)
+  .reviews-slider__slide
+    .reviews-slider__img
+      img(src="assets/img/reviews/reviews-" + pic + ".jpg" alt="image")
+    h3.reviews-slider__name #{name}
+
+
+//begin reviews-slider
+.reviews-slider-sec
+  .container
+    //begin reviews-slider-sec-header
+    .reviews-slider-sec-header
+      h2.reviews-slider-sec-header__title Reviews
+    //end reviews-slider-sec-header
+
+    //begin reviews-slider
+    .reviews-slider#reviews-slider
+      +reviews-slider__slide('02', 'Sandy & Michael')
+      +reviews-slider__slide('03', 'Bonnie & Clyde')
+      +reviews-slider__slide('01', 'Nancy & Sid')
+      +reviews-slider__slide('02', 'Sandy & Michael')
+      +reviews-slider__slide('01', 'Nancy & Sid')
+    //end reviews-slider
+
+    //begin reviews-slider-thumb
+    .reviews-slider-thumb#reviews-slider-thumb
+      .reviews-slider-thumb__slide
+        blockquote Iryna is the creative visionary behind Flowerland Décor’s acclaimed experiential and transportive design work, an inspired team player, and consummate collaborator, who always wins the trust and respect of colleagues and clients. Iryna’s work reflects a bold, can-do attitude, where bringing a client’s vision to life is not only possible but paramount.
+      .reviews-slider-thumb__slide
+        blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      .reviews-slider-thumb__slide
+        blockquote Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .reviews-slider-thumb__slide
+        blockquote Iryna is the creative visionary behind Flowerland Décor’s acclaimed experiential and transportive design work, an inspired team player, and consummate collaborator, who always wins the trust and respect of colleagues and clients. Iryna’s work reflects a bold, can-do attitude, where bringing a client’s vision to life is not only possible but paramount.
+      .reviews-slider-thumb__slide
+        blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    //end reviews-slider-thumb
+
+  .container
+    //begin reviews-slider-sec-footer
+    .reviews-slider-sec-footer
+      span
+        | Want to leave a review?
+        =' '
+        a(href="#") Click here!
+    //end reviews-slider-sec-footer
+//end reviews-slider

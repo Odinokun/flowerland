@@ -1,0 +1,147 @@
+.reviews-slider-sec {
+  background-color: rgba(209, 229, 228, .4);
+}
+
+.reviews-slider-sec-header {
+  padding: 65px 0;
+}
+
+.reviews-slider-sec-header__title {
+  font-size: 50px;
+  line-height: 1;
+  text-align: center;
+  color: #2f2d2d;
+
+  @include max(576) {
+    font-size: 40px;
+  }
+}
+
+// begin reviews-slider {
+.reviews-slider {
+  margin-bottom: 30px;
+  .slick-list {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+.reviews-slider__slide {
+  &.slick-center {
+    transition: width .5s;
+    .reviews-slider__img {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .reviews-slider__name {
+      transform: scale(1);
+    }
+  }
+  .reviews-slider__img {
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 15px;
+    transition: all .5s;
+    transform: scale(.7);
+    opacity: .7;
+    border-radius: 50%;
+    background-color: #fff;
+
+    will-change: transform;
+    @include max(576) {
+      transform: scale(1);
+      opacity: 1;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .reviews-slider__name {
+    font-family: $font;
+    font-size: 20px;
+    line-height: 1;
+    transition: transform .5s;
+    transform: scale(0);
+    text-align: center;
+    color: #2f2d2d;
+
+    will-change: transform;
+    @include max(576) {
+      transform: scale(1);
+    }
+  }
+}
+
+//end reviews-slider {
+
+//begin reviews-slider-thumb{
+.reviews-slider-thumb {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  .slick-dots li,
+  .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    margin: 0 19px;
+
+    @include max(576) {
+      margin: 0 10px;
+    }
+  }
+  .slick-dots li button:before {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    transition: .2s;
+    transform: scale(.7);
+    opacity: 1;
+    color: transparent;
+    border: 2px solid #b3867c;
+    border-radius: 50%;
+    background-color: transparent;
+
+    will-change: transform;
+  }
+  .slick-dots li button:hover::before,
+  .slick-dots li button[aria-selected='true']::before {
+    transform: scale(1);
+    background-color: #b3867c;
+  }
+}
+
+.reviews-slider-thumb__slide {
+  padding: 78px 10px;
+  background-image: url('../img/blockquote.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 20px;
+
+  @include max(576) {
+    padding: 50px 0 30px 0;
+  }
+  blockquote {
+    font-family: $font;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2f2d2d;
+  }
+}
+
+//end reviews-slider-thumb
+
+.reviews-slider-sec-footer {
+  margin-top: 60px;
+  padding: 43px 0 33px 0;
+  text-align: center;
+  border-top: 1px solid #fff;
+  span {
+    font-size: 17px;
+    color: #2f2d2d;
+  }
+}
