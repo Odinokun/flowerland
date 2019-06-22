@@ -162,9 +162,9 @@ svg {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 30px 10px 130px;
+  padding: 10px 30px 10px 100px;
 
-  @include max(1280) {
+  @include max(1300) {
     padding: 10px 30px 10px 160px;
   }
   @include max(1020) {
