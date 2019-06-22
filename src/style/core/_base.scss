@@ -162,40 +162,31 @@ svg {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 30px 10px 130px;
-  @include max(1280) {
 
-  padding: 10px 30px 10px 160px;
+  @include max(1280) {
+    padding: 10px 30px 10px 160px;
   }
   @include max(1020) {
-  padding: 10px 30px 10px 100px;
-
+    padding: 10px 30px 10px 100px;
   }
   @include max(576) {
-  padding: 10px 15px 10px 80px;
-
-  }
-
-  @include max(768) {
-    //padding: 10px 20px;
-  }
-  @include max(425) {
-    //padding: 10px;
+    padding: 10px 15px 10px 80px;
   }
 }
 
 .btn {
   position: relative;
-  overflow: hidden;
   display: inline-block;
+  overflow: hidden;
   height: 60px;
   padding: 0 74px 0 42px;
   cursor: pointer;
+
   @include max(1020) {
     height: 50px;
   }
   @include max(576) {
-  padding: 0 50px 0 20px;
-
+    padding: 0 50px 0 20px;
   }
   &:hover {
     &::before {
@@ -207,18 +198,19 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
     width: 100%;
     height: 60px;
     content: '';
     transition: transform .5s;
     transform: translateX(-56%);
-    background-color: #b3867c;
+    background-image: linear-gradient(to right, #fdcac0 0%, #b3867c 100%);
 
-    will-change: transform;
     @include max(1020) {
       height: 50px;
     }
   }
+
   a,
   button,
   input {
@@ -236,6 +228,7 @@ svg {
     border: none;
     background-color: transparent;
     box-shadow: none;
+
     @include max(1020) {
       line-height: 50px;
     }
@@ -245,13 +238,14 @@ svg {
   }
   svg {
     position: absolute;
-    right: 42px;
     top: 0;
+    right: 42px;
     bottom: 0;
-    margin: auto 0 auto 16px;
     fill: #d1e5e4;
     width: 16px;
     height: 16px;
+    margin: auto 0 auto 16px;
+
     @include max(576) {
       right: 20px;
     }
