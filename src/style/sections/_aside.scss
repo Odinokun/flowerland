@@ -14,6 +14,7 @@
   @include max(1020) {
     width: 60px;
   }
+
   @include maxHeight(740) {
     padding: 60px 5px 70px 5px;
   }
@@ -39,7 +40,8 @@
   }
 }
 
-.index.purple {
+.index.purple,
+.about {
   .aside-contacts__icon svg {
     fill: #2f2d2d;
   }

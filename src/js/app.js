@@ -9,9 +9,6 @@ $(function() {
   // begin Popup
   // require('./modules/popup')();
 
-  // begin onepage-scroll
-  require('./modules/onePageScroll')();
-
   // begin menu
   require('./modules/menu')();
 

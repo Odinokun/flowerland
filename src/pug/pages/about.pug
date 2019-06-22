@@ -1,0 +1,19 @@
+extends ../_template
+
+block variables
+  - var title       = 'About Us | Flowerland decor'
+  - var description = 'About Us | Flowerland decor'
+  - var ogtitle     = 'About Us | Flowerland decor'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap.about
+    include ../sections/aside
+
+    //begin content
+    main.main
+      include ../sections/about-us
+      #test(style="height:400px;background:tomato;")
+    //end content
+
+  include ../sections/scripts

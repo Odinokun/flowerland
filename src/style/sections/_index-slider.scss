@@ -63,17 +63,17 @@
     display: none;
   }
 
-  #logo-pic {
+  .logo-pic {
     fill: #d1e5e4;
   }
-  #logo-text {
+  .logo-text {
     fill: #fff;
   }
 }
 
 .index-slider__slide--white {
   .index-slider__logo {
-    #logo-text {
+    .logo-text {
       fill: #2f2d2d;
     }
   }
