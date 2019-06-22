@@ -6,10 +6,10 @@
 
 html,
 body {
+  overflow: visible;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: visible;
 }
 
 html {
@@ -78,7 +78,7 @@ a {
   color: $highlight;
   &:hover {
     text-decoration: none;
-    color: $highlight-hov;
+    color: $highlight;
   }
 }
 
@@ -167,9 +167,11 @@ svg {
   @include max(1300) {
     padding: 10px 30px 10px 160px;
   }
+
   @include max(1020) {
     padding: 10px 30px 10px 100px;
   }
+
   @include max(576) {
     padding: 10px 15px 10px 80px;
   }
@@ -186,9 +188,11 @@ svg {
   @include max(1020) {
     height: 50px;
   }
+
   @include max(576) {
     padding: 0 50px 0 20px;
   }
+
   &:hover {
     &::before {
       transform: translateX(0);
@@ -233,6 +237,7 @@ svg {
     @include max(1020) {
       line-height: 50px;
     }
+
     @include max(576) {
       font-size: 10px;
     }

@@ -4,7 +4,7 @@ $(function() {
   require('./modules/svg4everybody')();
 
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
 
   // begin Popup
   // require('./modules/popup')();
