@@ -1,0 +1,71 @@
+extends ../_template
+
+mixin portfolio-slider__item(pic, title, subtitle)
+  //begin portfolio-slider__item
+  li.portfolio-slider__item
+    a(href="#").portfolio-slider__link
+      .portfolio-slider__link-circle
+    .portfolio-slider__pic
+      img(src="assets/img/portfolio-slide/portfolio-slide-" + pic + ".jpg" alt="portfolio")
+      .portfolio-slider__text
+        h3.portfolio-slider__title #{title}
+        span.portfolio-slider__subtitle #{subtitle}
+  //end portfolio-slider__item
+
+block variables
+  - var title       = 'Weddings | Flowerland decor'
+  - var description = 'Weddings | Flowerland decor'
+  - var ogtitle     = 'Weddings | Flowerland decor'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap.portfolio
+    include ../sections/aside
+
+    //begin content
+    main.main
+      //begin portfolio__header
+      .portfolio__header
+        .container
+          //begin contacts-logo
+          .portfolio-logo
+            a(href="/").portfolio-logo__logo.logo.logo--green.logo--sm
+              include ../elements/logo-svg
+          //end contacts-logo
+        .container
+          h2.portfolio__title Weddings
+          .portfolio__descr
+            p Our designs are always personalized and our client are special that is why we all at FlowerLand Décor are trying to be innovative.
+      //end portfolio__header
+
+      //begin portfolio__slider
+      .portfolio-slider
+        .container
+          .portfolio-slider__wrap#portfolio-slider__wrap
+            ul.portfolio-slider__list
+              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
+              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
+              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
+              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
+              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
+              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
+              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
+              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
+              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
+              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
+              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
+              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
+              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
+              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
+              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
+              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
+            .portfolio-slider__container
+      //end portfolio__slider
+
+      //begin portfolio__footer
+      .portfolio__footer
+        span Use scroll or Swipe
+
+    //end content
+
+  include ../sections/scripts
