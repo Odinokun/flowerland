@@ -5,7 +5,8 @@ module.exports = function() {
   $.gulp.task('copy:js', function() {
     return $.gulp.src([
       'src/js/uncompressed.js',
-      'src/js/map.js'
+      'src/js/map.js',
+      'src/vendors/sly.min.js'
     ])
       .pipe($.gulp.dest($.config.root + '/assets/js'))
   })
