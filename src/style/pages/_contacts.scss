@@ -50,11 +50,6 @@
   }
 }
 
-.contacts-form {
-  min-height: 50vh;
-  background-color: #d1e5e4;
-}
-
 //begin перевиваем кастомные стили карты
 #contacts-map {
   .gm-style .gm-style-iw-c {
@@ -131,6 +126,8 @@
 //end popup style
 
 .contacts-form {
+  min-height: 50vh;
+  background-color: #d1e5e4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,10 +245,10 @@
     }
   }
   input {
-    visibility: hidden;
     width: 115px;
     height: 40px;
     opacity: 0;
+    cursor: pointer;
   }
   svg {
     position: absolute;
@@ -259,6 +256,7 @@
     bottom: 0;
     left: 0;
     fill: #000;
+    pointer-events: none;
     width: 32px;
     height: 32px;
     margin: auto;
@@ -274,6 +272,7 @@
     top: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
     height: 14px;
     margin: auto;
     letter-spacing: 5px;
