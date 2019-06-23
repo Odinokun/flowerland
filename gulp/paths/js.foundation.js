@@ -14,8 +14,5 @@ module.exports = [
   './src/vendors/jquery.onepage-scroll.js',
 
   // include jquery-ui
-  './src/vendors/jquery-ui.js',
-
-  // include sly
-  './src/vendors/sly.min.js'
+  './src/vendors/jquery-ui.js'
 ];

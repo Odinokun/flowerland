@@ -23,7 +23,7 @@ block content
     include ../sections/aside
 
     //begin content
-    main.main
+    main.main(style="background-image:url('assets/img/bg-portfolio-01.jpg')")
       //begin portfolio__header
       .portfolio__header
         .container
@@ -68,4 +68,24 @@ block content
 
     //end content
 
+
   include ../sections/scripts
+  script(src='./assets/js/sly.min.js')
+  script.
+    $('#portfolio-slider__wrap').sly({
+      horizontal: 1,
+      itemNav: 'basic',
+      smart: 1,
+      activateOn: 'click',
+      mouseDragging: 1,
+      touchDragging: 1,
+      releaseSwing: 1,
+      startAt: 0,
+      scrollBy: 1,
+      speed: 1000,
+      elasticBounds: 1,
+      dragHandle: 1,
+      dynamicHandle: 1,
+      pauseOnHover: 1
+    });
+
