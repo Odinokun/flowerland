@@ -113,6 +113,76 @@ button {
   outline: none;
 }
 
+//begin custom select
+.select + span:hover,
+.select + span {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 0 0 10px;
+  text-align: center !important;
+  color: #2f2d2d;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #2f2d2d !important;
+  border-left: none !important;
+  outline: none;
+  background-color: transparent !important;
+  .ui-selectmenu-text {
+    margin-right: 50px;
+  }
+  .ui-selectmenu-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    float: none;
+    width: 46px;
+    height: 46px;
+    background-color: #2f2d2d;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      margin: auto;
+      content: '';
+      border-radius: 1px;
+      background-color: #fff;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.custom-select-menu {
+  font-size: 14px;
+  line-height: 1;
+  max-width: 250px;
+  margin: 0;
+  padding: 20px 10px 0 55px;
+  color: #fff;
+  border: none !important;
+  background-color: #2f2d2d;
+  li {
+    padding: 5px 0;
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+  .ui-state-active {
+    text-decoration: underline;
+    color: #d1e5e4;
+  }
+}
+
+//end custom select
+
 .input,
 .textarea {
   font-size: 14px;
@@ -122,6 +192,7 @@ button {
 }
 
 .input {
+  font-weight: 700;
   line-height: 50px;
   height: 50px;
   padding: 0 10px;
@@ -136,6 +207,7 @@ button {
 }
 
 .textarea {
+  font-weight: 700;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -149,16 +221,19 @@ button {
 
 //begin выравниваю по вертикали textarea placeholder
 ::-moz-placeholder {
+  font-weight: 400;
   line-height: 75px;
   color: #2f2d2d;
 }
 
 ::-webkit-input-placeholder {
+  font-weight: 400;
   line-height: 75px;
   color: #2f2d2d;
 }
 
 :-ms-input-placeholder {
+  font-weight: 400;
   line-height: 75px;
   color: #2f2d2d;
 }
@@ -167,6 +242,7 @@ button {
 
 .input.error,
 .textarea.error {
+  color: #de3b3b !important;
   border-color: #de3b3b !important;
   &::-moz-placeholder {
     color: #de3b3b;

@@ -11,5 +11,8 @@ module.exports = [
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 
   // include onepage-scroll
-  './src/vendors/jquery.onepage-scroll.js'
+  './src/vendors/jquery.onepage-scroll.js',
+
+  // include jquery-ui
+  './src/vendors/jquery-ui.js'
 ];

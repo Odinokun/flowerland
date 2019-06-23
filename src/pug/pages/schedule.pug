@@ -1,0 +1,61 @@
+extends ../_template
+
+block variables
+  - var title       = 'Schedule a Consultation | Flowerland decor'
+  - var description = 'Schedule a Consultation | Flowerland decor'
+  - var ogtitle     = 'Schedule a Consultation | Flowerland decor'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap.schedule
+    include ../sections/aside
+
+    //begin content
+    main.main
+      //begin schedule-logo
+      .schedule-logo
+        .container
+          a(href="/").schedule-logo__logo.logo
+            include ../elements/logo-svg
+      //end schedule-logo
+
+      // begin schedule-section
+      .schedule-section
+        .container
+          .schedule-item
+            .schedule-item__header
+              h2.schedule-item__title Schedule a Consultation
+            .schedule-item__body
+              // begin schedule-item__form
+              form.schedule-item__form
+                .schedule-item__form-row
+                  input(name='name' placeholder='Your Name').schedule-item__form-input.input
+                  input(name='phone' placeholder='Phone').schedule-item__form-input.input
+                  input(name='email' placeholder='Email').schedule-item__form-input.input
+                  select( name="event").schedule-item__form-select.select
+                    option(value='Type Of Event' selected) Type Of Event
+                    option(value='Weddings') Weddings
+                    option(value='Special Events') Special Events
+                    option(value='Weddings') Weddings
+                    option(value='Special Events') Special Events
+                    option(value='Weddings') Weddings
+                    option(value='Special Events') Special Events
+
+                  input(name='budget' placeholder='Your Budget').schedule-item__form-input.input
+                  input(name='date' placeholder='Date').schedule-item__form-input.input.error
+                .schedule-item__form-row
+                  textarea(placeholder='Tell us more about your event').schedule-item__form-textarea.textarea
+                .schedule-item__form-row
+                  .schedule-item__form-reset
+                    input(type='reset')
+                    +svg('reset')
+                    span clear
+                  .schedule-item__form-submit.btn
+                    input(type='submit' value='send')
+                    +svg('arr-bottom')
+              // begin schedule-item__form
+      // begin schedule-section
+
+    //end content
+
+  include ../sections/scripts

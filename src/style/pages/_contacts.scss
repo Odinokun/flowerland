@@ -21,14 +21,13 @@
   left: 100px;
   width: 155px;
   height: 75px;
+
   @include max(1300) {
     left: 160px;
   }
-
   @include max(1020) {
     left: 100px;
   }
-
   @include max(576) {
     left: 80px;
   }
@@ -126,15 +125,14 @@
 //end popup style
 
 .contacts-form {
-  min-height: 50vh;
-  background-color: #d1e5e4;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 50vh;
   padding: 20px 0;
+  background-color: #d1e5e4;
   .container {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 
     @include max(900) {
       justify-content: center;
@@ -214,16 +212,15 @@
   justify-content: space-between;
   align-items: center;
 
-  @include max(425) {
-    justify-content: center;
-    flex-wrap: wrap;
+  @include max(500) {
+    flex-direction: column;
   }
 }
 
 .contacts-form__form-input {
   width: 45%;
 
-  @include max(425) {
+  @include max(500) {
     width: 100%;
     margin-top: -20px;
   }
@@ -235,7 +232,7 @@
   height: 40px;
   cursor: pointer;
 
-  @include max(425) {
+  @include max(500) {
     margin-bottom: 30px;
   }
 
@@ -247,8 +244,8 @@
   input {
     width: 115px;
     height: 40px;
-    opacity: 0;
     cursor: pointer;
+    opacity: 0;
   }
   svg {
     position: absolute;
@@ -256,11 +253,11 @@
     bottom: 0;
     left: 0;
     fill: #000;
-    pointer-events: none;
     width: 32px;
     height: 32px;
     margin: auto;
     transition: transform .5s;
+    pointer-events: none;
 
     will-change: transform;
   }
@@ -272,11 +269,11 @@
     top: 0;
     right: 0;
     bottom: 0;
-    pointer-events: none;
     height: 14px;
     margin: auto;
     letter-spacing: 5px;
     text-transform: uppercase;
+    pointer-events: none;
     color: #2f2d2d;
   }
 }
