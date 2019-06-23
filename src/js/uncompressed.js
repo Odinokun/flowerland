@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'about',
     'contacts',
-    'schedule'
+    'schedule',
+    'portfolio'
     ]);
 });
 

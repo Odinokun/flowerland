@@ -19,24 +19,17 @@
   position: absolute;
   top: 50px;
   left: 100px;
-  width: 155px;
-  height: 75px;
 
   @include max(1300) {
     left: 160px;
   }
+
   @include max(1020) {
     left: 100px;
   }
+
   @include max(576) {
     left: 80px;
-  }
-  .logo-pic {
-    fill: #b3867c;
-    background-image: linear-gradient(to right, #fdcac0 0%, #b3867c 100%);
-  }
-  .logo-text {
-    fill: #2f2d2d;
   }
 }
 

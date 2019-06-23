@@ -20,23 +20,17 @@
   position: absolute;
   top: 50px;
   left: 100px;
-  width: 155px;
-  height: 75px;
 
   @include max(1300) {
     left: 160px;
   }
+
   @include max(1020) {
     left: 100px;
   }
+
   @include max(576) {
     left: 80px;
-  }
-  .logo-pic {
-    fill: #d1e5e4;
-  }
-  .logo-text {
-    fill: #2f2d2d;
   }
 }
 
@@ -65,9 +59,11 @@
   @include max(1200) {
     padding: 25px 50px;
   }
+
   @include max(650) {
     padding: 10px;
   }
+
   &::before,
   &::after {
     position: absolute;
@@ -80,6 +76,7 @@
       width: 50px;
       height: 100px;
     }
+
     @include max(650) {
       display: none;
     }
@@ -125,9 +122,11 @@
     font-size: 50px;
     line-height: 50px;
   }
+
   @include max(760) {
     font-size: 40px;
   }
+
   @include max(425) {
     font-size: 32px;
     line-height: 40px;
@@ -140,6 +139,7 @@
   @include max(900) {
     padding: 35px 20px;
   }
+
   @include max(650) {
     padding: 20px 10px 35px 10px;
   }
@@ -170,6 +170,7 @@
   @include max(900) {
     width: 46%;
   }
+
   @include max(650) {
     width: 100%;
   }
@@ -184,6 +185,7 @@
   @include max(650) {
     right: 40px;
   }
+
   @include max(576) {
     right: 25px;
   }
@@ -252,6 +254,7 @@
   @include max(375) {
     padding: 0 70px;
   }
+
   a,
   button,
   input {

@@ -66,19 +66,10 @@
 }
 
 .about-us__logo {
-  max-width: 155px;
-  height: 75px;
   margin-bottom: 90px;
 
   @include max(576) {
     margin-bottom: 50px;
-  }
-  .logo-pic {
-    fill: #b3867c;
-    background-image: linear-gradient(to right, #fdcac0 0%, #b3867c 100%);
-  }
-  .logo-text {
-    fill: #2f2d2d;
   }
 }
 
@@ -101,6 +92,7 @@
   @include max(1020) {
     padding-right: 0;
   }
+
   p {
     font-size: 16px;
     line-height: 26px;
@@ -135,6 +127,7 @@
     max-width: 200px;
     padding: 150px 0;
   }
+
   p {
     font-family: $font-bsb;
     font-size: 42px;
@@ -144,6 +137,7 @@
     @include max(576) {
       font-size: 30px;
     }
+
     span {
       text-decoration: underline;
     }

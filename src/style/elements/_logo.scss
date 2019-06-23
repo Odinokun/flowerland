@@ -1,15 +1,43 @@
 .logo {
-  width: 100%;
-  max-width: 230px;
+  width: 230px;
   height: 111px;
+  display: block;
   svg {
-    width: 100%;
-    height: 100%;
+    width: 230px;
+    height: 111px;
   }
-  #logo-pic {
+  .logo-pic {
     fill: #d1e5e4;
   }
-  #logo-text {
+  .logo-text {
     fill: #fff;
+  }
+}
+
+.logo--sm {
+  width: 155px;
+  height: 75px;
+  svg {
+    width: 155px;
+    height: 75px;
+  }
+}
+
+.logo--red {
+  .logo-pic {
+    fill: #b3867c;
+    background-image: linear-gradient(to right, #fdcac0 0%, #b3867c 100%);
+  }
+  .logo-text {
+    fill: #2f2d2d;
+  }
+}
+
+.logo--green {
+  .logo-pic {
+    fill: #d1e5e4;
+  }
+  .logo-text {
+    fill: #2f2d2d;
   }
 }
