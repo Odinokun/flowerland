@@ -113,23 +113,70 @@ button {
   outline: none;
 }
 
-input {
-  padding: 3px 10px 5px 10px;
-  color: $text;
-  border: 1px solid $text;
+.input,
+.textarea {
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2f2d2d;
+}
+
+.input {
+  line-height: 50px;
+  height: 50px;
+  padding: 0 10px;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #2f2d2d;
+  border-left: none;
+  background-color: transparent;
   &::placeholder {
-    @include placeholder-color($text);
+    @include placeholder-color(#2f2d2d);
   }
 }
 
-textarea {
+.textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
   resize: none;
+  border: 2px solid #2f2d2d;
+  background-color: transparent;
+  &::placeholder {
+    @include placeholder-color(#2f2d2d);
+  }
 }
 
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
+//begin выравниваю по вертикали textarea placeholder
+::-moz-placeholder {
+  line-height: 75px;
+  color: #2f2d2d;
+}
+
+::-webkit-input-placeholder {
+  line-height: 75px;
+  color: #2f2d2d;
+}
+
+:-ms-input-placeholder {
+  line-height: 75px;
+  color: #2f2d2d;
+}
+
+//end выравниваю по вертикали textarea placeholder
+
+.input.error,
+.textarea.error {
+  border-color: #de3b3b !important;
+  &::-moz-placeholder {
+    color: #de3b3b;
+  }
+  &::-webkit-input-placeholder {
+    color: #de3b3b;
+  }
+  &:-ms-input-placeholder {
+    color: #de3b3b;
+  }
 }
 
 svg {
@@ -167,11 +214,9 @@ svg {
   @include max(1300) {
     padding: 10px 30px 10px 160px;
   }
-
   @include max(1020) {
     padding: 10px 30px 10px 100px;
   }
-
   @include max(576) {
     padding: 10px 15px 10px 80px;
   }
@@ -188,7 +233,6 @@ svg {
   @include max(1020) {
     height: 50px;
   }
-
   @include max(576) {
     padding: 0 50px 0 20px;
   }
@@ -237,7 +281,6 @@ svg {
     @include max(1020) {
       line-height: 50px;
     }
-
     @include max(576) {
       font-size: 10px;
     }

@@ -1,0 +1,257 @@
+.contacts {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts-map {
+  flex-grow: 1;
+  background-color: #ccc;
+
+  @include max(900) {
+    min-height: 50vh;
+  }
+}
+
+.contacts-form {
+  min-height: 50vh;
+  background-color: #d1e5e4;
+}
+
+//begin перевиваем кастомные стили карты
+#contacts-map {
+  .gm-style .gm-style-iw-c {
+    border-radius: 5px 5px 5px 0;
+  }
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+  .gm-style-iw.gm-style-iw-c {
+    padding: 0;
+    background-image: linear-gradient(to right, #fdcac0 0%, #b3867c 100%);
+  }
+  .gm-style .gm-style-iw-t::after {
+    width: 22px;
+    height: 22px;
+    transform: translate(-190px, -0%) rotate(0deg);
+    border-top: 11px solid #fdcac0;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 11px solid #fdcac0;
+    background: transparent;
+
+    @include max(576) {
+      display: none;
+    }
+  }
+  .gm-style .gm-style-iw-t {
+    bottom: 0 !important;
+    transform: translateX(200px);
+  }
+  .gm-style-iw-d {
+    overflow: hidden !important;
+  }
+  .gm-style-mtc {
+    display: none;
+  }
+}
+
+//end перевиваем кастомные стили карты
+
+//begin popup style
+.map-popup {
+  width: 380px;
+  padding: 33px 15px 15px 25px;
+
+  @include max(576) {
+    display: none;
+  }
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #2f2d2d;
+  }
+}
+
+.contacts-popup__link {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.contacts-popup__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+//end popup style
+
+.contacts-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  .container {
+    display: flex;
+    justify-content: flex-start;
+
+    @include max(900) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.contacts-form__left {
+  width: 100%;
+  max-width: 530px;
+
+  @include max(900) {
+    max-width: 470px;
+    margin-bottom: 50px;
+  }
+}
+
+.contacts-form__right {
+  width: 100%;
+  max-width: 470px;
+}
+
+.contacts-form__title {
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 50px;
+  color: #2f2d2d;
+
+  @include max(576) {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.contacts-form__contacts-link {
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #2f2d2d;
+
+  @include max(576) {
+    font-size: 16px;
+  }
+  &:hover {
+    color: #2f2d2d;
+  }
+}
+
+.contacts-form__contacts-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background-color: #fdcac0;
+
+  @include max(375) {
+    margin-right: 10px;
+  }
+  svg {
+    max-width: 40%;
+    max-height: 40%;
+  }
+}
+
+//begin contacts-form__form
+.contacts-form__form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include max(425) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.contacts-form__form-input {
+  width: 45%;
+
+  @include max(425) {
+    width: 100%;
+    margin-top: -20px;
+  }
+}
+
+.contacts-form__form-reset {
+  position: relative;
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+
+  @include max(425) {
+    margin-bottom: 30px;
+  }
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  input {
+    visibility: hidden;
+    width: 115px;
+    height: 40px;
+    opacity: 0;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    fill: #000;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    transition: transform .5s;
+
+    will-change: transform;
+  }
+  span {
+    font-family: $font-bb;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #2f2d2d;
+  }
+}
+
+.contacts-form__form-submit {
+  padding: 0 100px 0 100px;
+  a,
+  button,
+  input {
+    color: #2f2d2d;
+  }
+  svg {
+    fill: #2f2d2d;
+  }
+}
+
+//end contacts-form__form

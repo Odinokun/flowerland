@@ -1,0 +1,63 @@
+extends ../_template
+
+block variables
+  - var title       = 'Contacts Us | Flowerland decor'
+  - var description = 'Contacts Us | Flowerland decor'
+  - var ogtitle     = 'Contacts Us | Flowerland decor'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap.contacts
+    include ../sections/aside
+
+    //begin content
+    main.main
+      .contacts-map#contacts-map
+        a(href="" target="_blank" rel="nofollow noopener noreferrer") 
+        a(href="tel:+")
+      //begin contacts-form
+      .contacts-form
+        .container
+          //begin contacts-form__left
+          .contacts-form__left
+            h2.contacts-form__title Contacts
+            .contacts-form__contacts
+              a.contacts-form__contacts-link(href='https://goo.gl/maps/GkSJPDPJHtM6GryX9', target='_blank', rel='nofollow noopener noreferrer')
+                .contacts-form__contacts-svg
+                  +svg('marker')
+                span 94 Quentin Rd, Brooklyn, NY 11223
+              a.contacts-form__contacts-link(href='mailto:info@flowerlanddecor.com')
+                .contacts-form__contacts-svg
+                  +svg('mail')
+                span info@flowerlanddecor.com
+              a.contacts-form__contacts-link(href='tel:+13472726720')
+                .contacts-form__contacts-svg
+                  +svg('phone')
+                span 347 272 6720
+          //begin contacts-form__left
+
+          //begin contacts-form__right
+          .contacts-form__right
+            //begin contacts-form__form
+            form.contacts-form__form
+              .contacts-form__form-row
+                input(name='name' placeholder='Your Name').contacts-form__form-input.input.error
+                input(name='email' placeholder='Email').contacts-form__form-input.input
+              .contacts-form__form-row
+                textarea(placeholder='Your text here').contacts-form__form-textarea.textarea
+              .contacts-form__form-row
+                .contacts-form__form-reset
+                  input(type='reset')
+                  +svg('reset')
+                  span clear
+                .contacts-form__form-submit.btn
+                  input(type='submit' value='send')
+                  +svg('arr-bottom')
+            //end contacts-form__form
+          //end contacts-form__right
+      //begin contacts-form
+    //end content
+
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOCsBWLmb8s4eo6cltyZG2HRu99sG3RnE")
+  include ../sections/scripts
+  script(src='./assets/js/map.js')
