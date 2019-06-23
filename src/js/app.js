@@ -12,4 +12,7 @@ $(function() {
   // begin menu
   require('./modules/menu')();
 
+  // begin jquery-ui
+  require('./modules/jquery-ui')();
+
 });

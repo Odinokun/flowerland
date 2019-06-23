@@ -1,0 +1,263 @@
+.schedule {
+  .main {
+    background-color: #f6f1f5;
+    background-image: url('../img/bg-schedule.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
+.schedule-logo {
+  .container {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.schedule-logo__logo {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  width: 155px;
+  height: 75px;
+
+  @include max(1300) {
+    left: 160px;
+  }
+  @include max(1020) {
+    left: 100px;
+  }
+  @include max(576) {
+    left: 80px;
+  }
+  .logo-pic {
+    fill: #d1e5e4;
+  }
+  .logo-text {
+    fill: #2f2d2d;
+  }
+}
+
+.schedule-section {
+  display: flex;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+.schedule-item {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+}
+
+.schedule-item__header {
+  position: relative;
+  padding: 25px 95px 45px;
+  background-color: #f7f7f7;
+
+  @include max(1200) {
+    padding: 25px 50px;
+  }
+  @include max(650) {
+    padding: 10px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 150px;
+    content: '';
+
+    @include max(1200) {
+      width: 50px;
+      height: 100px;
+    }
+    @include max(650) {
+      display: none;
+    }
+  }
+  &::before {
+    left: 0;
+    border-top: 75px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid #fff;
+    border-left: 50px solid #fff;
+
+    @include max(1200) {
+      border-top: 50px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid #fff;
+      border-left: 25px solid #fff;
+    }
+  }
+  &::after {
+    right: 0;
+    border-top: 75px solid transparent;
+    border-right: 50px solid #fff;
+    border-bottom: 75px solid #fff;
+    border-left: 50px solid transparent;
+
+    @include max(1200) {
+      border-top: 50px solid transparent;
+      border-right: 25px solid #fff;
+      border-bottom: 50px solid #fff;
+      border-left: 25px solid transparent;
+    }
+  }
+}
+
+.schedule-item__title {
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 0;
+  text-align: center;
+  color: #2f2d2d;
+
+  @include max(1200) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  @include max(760) {
+    font-size: 40px;
+  }
+  @include max(425) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.schedule-item__body {
+  padding: 35px 20px 70px 20px;
+
+  @include max(900) {
+    padding: 35px 20px;
+  }
+  @include max(650) {
+    padding: 20px 10px 35px 10px;
+  }
+}
+
+.schedule-item__form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.schedule-item__form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include max(500) {
+    flex-direction: column;
+  }
+}
+
+.schedule-item__form-select.select + span:hover,
+.schedule-item__form-select.select + span,
+.schedule-item__form-input {
+  width: 30%;
+
+  @include max(900) {
+    width: 46%;
+  }
+  @include max(650) {
+    width: 100%;
+  }
+}
+
+.custom-select-menu {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ui-selectmenu-open {
+  @include max(650) {
+    right: 40px;
+  }
+  @include max(576) {
+    right: 25px;
+  }
+}
+
+.schedule-item__form-textarea {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.schedule-item__form-reset {
+  position: relative;
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+
+  @include max(500) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  input {
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    fill: #000;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    transition: transform .5s;
+    pointer-events: none;
+
+    will-change: transform;
+  }
+  span {
+    font-family: $font-bb;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    pointer-events: none;
+    color: #2f2d2d;
+  }
+}
+
+.schedule-item__form-submit {
+  padding: 0 100px;
+
+  @include max(375) {
+    padding: 0 70px;
+  }
+  a,
+  button,
+  input {
+    color: #2f2d2d;
+  }
+  svg {
+    fill: #2f2d2d;
+  }
+}
