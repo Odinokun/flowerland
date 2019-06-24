@@ -12,4 +12,10 @@ $(function() {
   // begin jquery-ui
   require('./modules/jquery-ui')();
 
+  // begin masonry
+  require('./modules/masonry')();
+
+  // begin addBlocks
+  require('./modules/addBlocks')();
+
 });

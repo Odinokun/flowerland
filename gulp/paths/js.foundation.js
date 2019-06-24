@@ -14,5 +14,8 @@ module.exports = [
   './src/vendors/jquery.onepage-scroll.js',
 
   // include jquery-ui
-  './src/vendors/jquery-ui.js'
+  './src/vendors/jquery-ui.js',
+
+  // include masonry
+  './node_modules/masonry-layout/dist/masonry.pkgd.min.js'
 ];

@@ -1,0 +1,171 @@
+.project__header {
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.project-logo {
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+.project__title {
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom: 40px;
+  color: #fff;
+
+  @include max(960) {
+    font-size: 60px;
+  }
+  @include max(650) {
+    font-size: 50px;
+  }
+  @include max(425) {
+    font-size: 40px;
+  }
+}
+
+.project__descr {
+  display: flex;
+  align-items: center;
+  svg {
+    fill: #d1e5e4;
+    width: 12px;
+    height: 17px;
+    margin-right: 8px;
+  }
+}
+
+.project__descr-text {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.project__body {
+  padding-top: 76px;
+  padding-bottom: 100px;
+}
+
+.project__text-block {
+  p {
+    font-size: 15px;
+    line-height: 27px;
+    margin-bottom: 0;
+    color: #2f2d2d;
+  }
+}
+
+.project-grid {
+  padding-top: 100px;
+
+  @include max(760) {
+    padding-top: 50px;
+  }
+}
+
+.project-grid__item {
+  display: flex;
+  width: 26.5%;
+  margin-right: 6.7%;
+  margin-bottom: 80px;
+
+  @include max(760) {
+    width: 45%;
+    margin: 0 2% 40px 2%;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+  &:hover {
+    .project-grid__link-circle {
+      transform: scale(1);
+    }
+  }
+}
+
+.project-grid__item--hide {
+  display: none;
+}
+
+.project-grid__link-circle {
+  position: absolute;
+  right: 0;
+  bottom: -28px;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  margin: auto;
+  transition: transform .5s;
+  transform: scale(0);
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #e1b0a6 0%, #fdcac0 100%);
+
+  will-change: transform;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    margin: auto;
+    content: '';
+    border-radius: 1px;
+    background-color: #fff;
+  }
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.project__button {
+  position: relative;
+  width: 140px;
+  height: 44px;
+  margin: 0 auto;
+  &:hover {
+    svg {
+      transform: rotate(360deg);
+    }
+  }
+  button {
+    display: block;
+    width: 140px;
+    height: 44px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  span {
+    font-family: $font-bb;
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+    padding-left: 40px;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none;
+    color: #141414;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #fdcac0;
+    width: 39px;
+    height: 44px;
+    transition: transform .5s;
+    pointer-events: none;
+
+    will-change: transform;
+  }
+}

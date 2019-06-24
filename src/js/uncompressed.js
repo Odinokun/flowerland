@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'about',
     'contacts',
     'schedule',
-    'portfolio'
+    'portfolio',
+    'project'
     ]);
 });
 
