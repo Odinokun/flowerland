@@ -59,6 +59,14 @@
   @include max(576) {
     left: 80px;
   }
+  @include maxHeight(740) {
+    width: 155px;
+    height: 75px;
+    svg {
+      width: 155px;
+      height: 75px;
+    }
+  }
   @include maxHeight(567) {
     display: none;
   }
