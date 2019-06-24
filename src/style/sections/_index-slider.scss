@@ -48,13 +48,13 @@
 .index-slider__logo {
   position: absolute;
   top: 60px;
-  left: 120px;
+  left: 90px;
 
-  @include max(1280) {
-    left: 150px;
+  @include max(1300) {
+    left: 160px;
   }
   @include max(1020) {
-    left: 90px;
+    left: 105px;
   }
   @include max(576) {
     left: 80px;
