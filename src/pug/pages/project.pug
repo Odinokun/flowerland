@@ -1,0 +1,75 @@
+extends ../_template
+
+mixin project-grid__item(pic)
+  a(data-fancybox="gallery" href="assets/img/project/project-" + pic + "@3x.jpg" ).project-grid__item
+    img(src="assets/img/project/project-"+ pic +".jpg" alt="img")
+    .project-grid__link-circle
+
+mixin project-grid__item--hide(pic)
+  a(data-fancybox="gallery" href="assets/img/project/project-" + pic + "@3x.jpg" ).project-grid__item.project-grid__item--hide
+    img(src="assets/img/project/project-"+ pic +".jpg" alt="img")
+    .project-grid__link-circle
+
+block variables
+  - var title       = 'Weddings | Flowerland decor'
+  - var description = 'Weddings | Flowerland decor'
+  - var ogtitle     = 'Weddings | Flowerland decor'
+
+block content
+  #main-wrap.main-wrap.project
+    include ../sections/aside
+
+    //begin content
+    main.main
+      //begin portfolio__header
+      .project__header(style="background-image:url('assets/img/bg-project-header-01.jpg')")
+        .container
+          //begin contacts-logo
+          .project-logo
+            a(href="/").project-logo__logo.logo.logo--red.logo--sm
+              include ../elements/logo-svg
+          //end contacts-logo
+        .container
+          h2.project__title Boat Dream Wedding
+          .project__descr
+            +svg('marker-2')
+            span.project__descr-text Angelina`s Si
+      //end portfolio__header
+
+      //begin project__body
+      .project__body
+        .container
+          .project__text-block
+            p First and foremost, we believe that giving and receiving flowers should be a pleasure.Our purpose at FlowerLand Decor is to create flower and décor works of art that are a tribute to your personality on your special occasion, it is something that we do out of love, compassion, joy and appreciation. We are honored to share these moments with you, and aim to make the experience enjoyable, from beginning to end.
+            p Our corporate ethic, individuality and creativity makes every event unforgettable.
+
+        .container
+          .project-grid
+            +project-grid__item('01')
+            +project-grid__item('02')
+            +project-grid__item('03')
+            +project-grid__item('04')
+            +project-grid__item('05')
+            +project-grid__item('06')
+            +project-grid__item--hide('01')
+            +project-grid__item--hide('03')
+            +project-grid__item--hide('04')
+            +project-grid__item--hide('05')
+            +project-grid__item--hide('06')
+            +project-grid__item--hide('01')
+            +project-grid__item--hide('03')
+            +project-grid__item--hide('04')
+            +project-grid__item--hide('05')
+            +project-grid__item--hide('06')
+
+          .project__button
+            button#addBlocks
+              +svg('arr-circle')
+              span load more
+      //end project__body
+    //end content
+
+  include ../sections/scripts
+
+
+
