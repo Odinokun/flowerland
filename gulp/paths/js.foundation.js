@@ -16,6 +16,9 @@ module.exports = [
   // include jquery-ui
   './src/vendors/jquery-ui.js',
 
+  // include imagesLoaded (нужен для правильной загрузки картинок для masonry)
+  './node_modules/imagesloaded/imagesloaded.pkgd.js',
+
   // include masonry
   './node_modules/masonry-layout/dist/masonry.pkgd.min.js'
 ];

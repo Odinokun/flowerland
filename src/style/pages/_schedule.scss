@@ -9,38 +9,15 @@
 }
 
 .schedule-logo {
+  padding-top: 50px;
+  margin-bottom: 110px;
+  @include maxHeight(960) {
+    margin-bottom: 10px;
+  }
   .container {
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
-  }
-}
-
-.schedule-logo__logo {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-
-  @include max(1300) {
-    left: 160px;
-  }
-
-  @include max(1020) {
-    left: 100px;
-  }
-
-  @include max(576) {
-    left: 80px;
-  }
-}
-
-.schedule-section {
-  display: flex;
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
   }
 }
 
@@ -49,6 +26,7 @@
   max-width: 1000px;
   background-color: #fff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+  margin-bottom: 50px;
 }
 
 .schedule-item__header {
@@ -113,14 +91,13 @@
 
 .schedule-item__title {
   font-size: 80px;
-  line-height: 80px;
-  margin-bottom: 0;
+  line-height: 1;
+  margin: 0;
   text-align: center;
   color: #2f2d2d;
 
   @include max(1200) {
     font-size: 50px;
-    line-height: 50px;
   }
 
   @include max(760) {
@@ -129,7 +106,6 @@
 
   @include max(425) {
     font-size: 32px;
-    line-height: 40px;
   }
 }
 

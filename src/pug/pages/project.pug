@@ -2,13 +2,14 @@ extends ../_template
 
 mixin project-grid__item(pic)
   a(data-fancybox="gallery" href="assets/img/project/project-" + pic + "@3x.jpg" ).project-grid__item
-    img(src="assets/img/project/project-"+ pic +".jpg" alt="img")
+    img(data-src="assets/img/project/project-"+ pic +".jpg" src="assets/img/project/project-"+ pic +".jpg" alt="img")
     .project-grid__link-circle
 
 mixin project-grid__item--hide(pic)
   a(data-fancybox="gallery" href="assets/img/project/project-" + pic + "@3x.jpg" ).project-grid__item.project-grid__item--hide
-    img(src="assets/img/project/project-"+ pic +".jpg" alt="img")
+    img(data-src="assets/img/project/project-"+ pic +".jpg" src="assets/img/project/project-"+ pic +".jpg" alt="img")
     .project-grid__link-circle
+
 
 block variables
   - var title       = 'Weddings | Flowerland decor'
@@ -70,6 +71,7 @@ block content
     //end content
 
   include ../sections/scripts
+
 
 
 

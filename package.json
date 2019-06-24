@@ -52,6 +52,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^3.7.2",
     "fullpage.js": "^3.0.5",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.4.1",
     "masonry-layout": "^4.2.2",
     "normalize.css": "^7.0.0",
