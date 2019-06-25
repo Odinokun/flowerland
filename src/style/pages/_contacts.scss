@@ -8,6 +8,9 @@
 .contacts-logo {
   position: relative;
   z-index: 1;
+  @include max(500) {
+    display: none;
+  }
   .container {
     position: relative;
     padding-top: 0;
