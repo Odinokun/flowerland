@@ -51,9 +51,9 @@
     top: 20px;
     right: 20px;
   }
-  @include max(425) {
-    top: 15px;
-    right: 15px;
+  @include max(650) {
+    top: 10px;
+    right: 10px;
   }
   &:hover {
     transform: rotate(360deg);
@@ -81,7 +81,7 @@
     padding: 25px 50px;
   }
   @include max(650) {
-    padding: 10px;
+    padding: 20px 10px;
   }
 
   &::before,
@@ -155,7 +155,7 @@
     padding: 35px 20px;
   }
   @include max(650) {
-    padding: 20px 10px 35px 10px;
+    padding: 20px 25px 35px 25px;
   }
 }
 
@@ -188,19 +188,31 @@
   height: 185px;
   margin-top: 20px;
   margin-bottom: 50px;
+  @include max(425) {
+    height: 100px;
+  }
 }
 
 .popup {
   ::-moz-placeholder {
     line-height: 170px;
+    @include max(425) {
+      line-height: 80px;
+    }
   }
 
   ::-webkit-input-placeholder {
     line-height: 170px;
+    @include max(425) {
+      line-height: 80px;
+    }
   }
 
   :-ms-input-placeholder {
     line-height: 170px;
+    @include max(425) {
+      line-height: 80px;
+    }
   }
 }
 

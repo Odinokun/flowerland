@@ -2,12 +2,20 @@
   .main {
     display: flex;
     flex-direction: column;
+    background-color: #d1e5e4;
+    transition: .5s;
+
+    @include max(425) {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 }
 
 .contacts-logo {
   position: relative;
   z-index: 1;
+
   @include max(500) {
     display: none;
   }
@@ -26,11 +34,9 @@
   @include max(1300) {
     left: 160px;
   }
-
   @include max(1020) {
     left: 100px;
   }
-
   @include max(576) {
     left: 80px;
   }
@@ -276,6 +282,10 @@
 
 .contacts-form__form-submit {
   padding: 0 100px 0 100px;
+
+  @include max(500) {
+    margin-bottom: 30px;
+  }
   a,
   button,
   input {
