@@ -280,6 +280,7 @@
 
 .contacts-form__form-submit {
   padding: 0 100px 0 100px;
+
   @include max(500) {
     margin-bottom: 30px;
   }
