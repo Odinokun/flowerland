@@ -1,11 +1,12 @@
 .portfolio {
   .main {
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
-    overflow: hidden;
+
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -57,7 +58,6 @@
 }
 
 .portfolio-slider {
-  //overflow: hidden;
   .container {
     padding-top: 0;
     padding-bottom: 0;
@@ -75,7 +75,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
 
 .portfolio-slider__item {
@@ -85,7 +84,6 @@
   margin: 0 120px 50px 0;
   padding: 0;
   cursor: pointer;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
 
   @include max(1200) {
     margin: 0 80px 50px 0;
@@ -101,7 +99,6 @@
   @include maxHeight(680) {
     box-shadow: none;
   }
-
   &:nth-child(1n) {
     margin-top: 20px;
   }
@@ -167,12 +164,13 @@
 
 .portfolio-slider__pic {
   position: relative;
-  overflow: hidden;
   width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
   img {
     display: block;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
 }
@@ -213,6 +211,7 @@
 .portfolio__footer {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
   margin-top: auto;
   padding: 10px 50px 30px 0;
   span {
@@ -221,6 +220,10 @@
     display: block;
     padding-right: 118px;
     color: #2f2d2d;
+
+    @include max(425) {
+      padding-right: 58px;
+    }
 
     &::before {
       position: absolute;
@@ -232,6 +235,10 @@
       margin: auto;
       content: '';
       background-color: #2f2d2d;
+
+      @include max(425) {
+        width: 40px;
+      }
     }
   }
 }

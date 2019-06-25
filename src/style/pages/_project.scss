@@ -76,6 +76,9 @@
     width: 45%;
     margin: 0 2% 40px 2%;
   }
+  @include max(425) {
+    width: 100%;
+  }
   img {
     display: block;
     width: 100%;

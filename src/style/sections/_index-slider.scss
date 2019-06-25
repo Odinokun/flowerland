@@ -58,16 +58,15 @@
   @include max(1300) {
     left: 160px;
   }
-
   @include max(1020) {
     left: 105px;
   }
-
   @include max(576) {
+    top: 20px;
     left: 80px;
   }
-
   @include maxHeight(740) {
+    top: 20px;
     width: 155px;
     height: 75px;
     svg {
@@ -75,9 +74,11 @@
       height: 75px;
     }
   }
-
-  @include maxHeight(567) {
-    display: none;
+  @include max(425) {
+    width: 100px;
+    svg {
+      width: 100px;
+    }
   }
 
   .logo-pic {
@@ -111,12 +112,10 @@
     font-size: 50px;
     line-height: 50px;
   }
-
   @include max(576) {
     font-size: 40px;
     line-height: 40px;
   }
-
   @include maxHeight(650) {
     font-size: 50px;
     line-height: 50px;
@@ -164,12 +163,10 @@
   @include max(1020) {
     left: 23px;
   }
-
   @include maxHeight(800) {
     top: 150px;
     transform: translateY(0%);
   }
-
   @include maxHeight(580) {
     display: none;
   }
@@ -183,7 +180,6 @@
     @include maxHeight(740) {
       margin: 0 0 25px;
     }
-
     @include maxHeight(650) {
       margin: 0 0 15px;
     }
@@ -242,7 +238,6 @@
       height: 35px;
       margin-right: 20px;
     }
-
     @include max(375) {
       width: 25px;
       height: 25px;
@@ -257,7 +252,6 @@
     @include max(576) {
       font-size: 28px;
     }
-
     @include max(375) {
       font-size: 22px;
     }
@@ -265,7 +259,13 @@
 }
 
 .index-slider__slide--inst {
-  .index-slider__logo{
+  @include max(425) {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  .index-slider__logo {
     position: static;
     margin-bottom: 20px;
   }
@@ -273,17 +273,12 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
     @include max(425) {
-      height: auto;
       flex-direction: column;
       align-items: flex-start;
+      height: auto;
     }
-  }
-  @include max(425) {
-    display: flex;
-    height: 100vh;
-    flex-wrap: wrap;
-    align-items: flex-end;
   }
 }
 
@@ -305,7 +300,6 @@
   @include max(425) {
     top: 0;
   }
-
   @include max(425) {
     position: relative;
     justify-content: space-around;
@@ -324,20 +318,17 @@
       display: none;
     }
   }
-
   @include max(1280) {
     &:nth-child(3) {
       display: none;
     }
   }
-
   @include max(960) {
     &:nth-child(3),
     &:nth-child(4) {
       display: block;
     }
   }
-
   @include max(425) {
     width: 45%;
     margin-bottom: 20px;

@@ -3,9 +3,11 @@
     display: flex;
     flex-direction: column;
     background-color: #d1e5e4;
+    transition: .5s;
 
     @include max(425) {
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
