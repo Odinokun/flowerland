@@ -18,4 +18,7 @@ $(function() {
   // begin addBlocks
   require('./modules/addBlocks')();
 
+  // begin popup
+  require('./modules/popup')();
+
 });
