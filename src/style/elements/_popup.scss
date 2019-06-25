@@ -1,0 +1,274 @@
+.popup__layer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  opacity: .8;
+  background-color: #2f2d2d;
+}
+
+.popup {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 95vh;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+
+  @include maxHeight(820) {
+    overflow: auto;
+    max-height: 95vh;
+  }
+  @include max(760) {
+    width: 95%;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  z-index: 1;
+  top: -64px;
+  right: -64px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform .5s;
+
+  will-change: transform;
+  @include maxHeight(820) {
+    top: 20px;
+    right: 20px;
+  }
+  @include max(760) {
+    top: 20px;
+    right: 20px;
+  }
+  @include max(425) {
+    top: 15px;
+    right: 15px;
+  }
+  &:hover {
+    transform: rotate(360deg);
+  }
+  svg {
+    fill: #d1e5e4;
+    width: 24px;
+    height: 24px;
+
+    @include max(760) {
+      fill: $text;
+    }
+    @include maxHeight(820) {
+      fill: $text;
+    }
+  }
+}
+
+.popup__header {
+  position: relative;
+  padding: 25px 95px 45px;
+  background-color: #f7f7f7;
+
+  @include max(1200) {
+    padding: 25px 50px;
+  }
+  @include max(650) {
+    padding: 10px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 150px;
+    content: '';
+
+    @include max(1200) {
+      width: 50px;
+      height: 100px;
+    }
+    @include max(650) {
+      display: none;
+    }
+  }
+  &::before {
+    left: 0;
+    border-top: 75px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid #fff;
+    border-left: 50px solid #fff;
+
+    @include max(1200) {
+      border-top: 50px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid #fff;
+      border-left: 25px solid #fff;
+    }
+  }
+  &::after {
+    right: 0;
+    border-top: 75px solid transparent;
+    border-right: 50px solid #fff;
+    border-bottom: 75px solid #fff;
+    border-left: 50px solid transparent;
+
+    @include max(1200) {
+      border-top: 50px solid transparent;
+      border-right: 25px solid #fff;
+      border-bottom: 50px solid #fff;
+      border-left: 25px solid transparent;
+    }
+  }
+}
+
+.popup__title {
+  font-size: 80px;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  color: #2f2d2d;
+
+  @include max(1200) {
+    font-size: 50px;
+  }
+  @include max(760) {
+    font-size: 40px;
+  }
+  @include max(425) {
+    font-size: 32px;
+  }
+}
+
+.popup__body {
+  padding: 35px 20px 70px 20px;
+
+  @include max(900) {
+    padding: 35px 20px;
+  }
+  @include max(650) {
+    padding: 20px 10px 35px 10px;
+  }
+}
+
+.popup__form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.popup__form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include max(500) {
+    flex-direction: column;
+  }
+}
+
+.popup__form-input {
+  width: 46%;
+
+  @include max(650) {
+    width: 100%;
+  }
+}
+
+.popup__form-textarea {
+  height: 185px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.popup {
+  ::-moz-placeholder {
+    line-height: 170px;
+  }
+
+  ::-webkit-input-placeholder {
+    line-height: 170px;
+  }
+
+  :-ms-input-placeholder {
+    line-height: 170px;
+  }
+}
+
+.popup__form-reset {
+  position: relative;
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+
+  @include max(500) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  input {
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    fill: #000;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    transition: transform .5s;
+    pointer-events: none;
+
+    will-change: transform;
+  }
+  span {
+    font-family: $font-bb;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    pointer-events: none;
+    color: #2f2d2d;
+  }
+}
+
+.popup__form-submit {
+  padding: 0 100px;
+
+  @include max(375) {
+    padding: 0 70px;
+  }
+
+  a,
+  button,
+  input {
+    color: #2f2d2d;
+  }
+  svg {
+    fill: #2f2d2d;
+  }
+}

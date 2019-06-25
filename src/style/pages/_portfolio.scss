@@ -37,11 +37,9 @@
   @include max(960) {
     font-size: 60px;
   }
-
   @include max(576) {
     font-size: 50px;
   }
-
   @include max(425) {
     font-size: 40px;
   }
@@ -50,22 +48,11 @@
 .portfolio__descr {
   width: 100%;
   max-width: 570px;
-
-  //margin-top: 40px;
   padding-right: 50px;
 
   @include max(1200) {
     padding-right: 0;
   }
-
-  @include max(960) {
-    //margin-top: 35px;
-  }
-}
-
-.portfolio__body {
-  height: 400px;
-  background-color: tomato;
 }
 
 .portfolio-slider {
@@ -87,6 +74,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 .portfolio-slider__item {
@@ -101,15 +89,16 @@
   @include max(1200) {
     margin: 0 80px 50px 0;
   }
-
   @include max(900) {
     width: 220px;
     margin: 0 50px 50px 0;
   }
-
   @include max(500) {
     width: 180px;
     margin: 0 30px 50px 0;
+  }
+  @include maxHeight(680) {
+    box-shadow: none;
   }
 
   &:nth-child(1n) {
@@ -182,6 +171,8 @@
   img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
