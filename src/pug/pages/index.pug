@@ -19,7 +19,8 @@ block content
     // begin fullPageScroll
     $("#one-page-scroll").onepage_scroll({
       sectionContainer: ".index-slider__slide",
-      easing: "ease",
+      easing: "cubic-bezier(.22, .44, 0, 1)",
+      animationTime: 1500,
       updateURL: false,
       loop: false,
       keyboard: true,

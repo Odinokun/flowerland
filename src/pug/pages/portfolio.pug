@@ -42,15 +42,94 @@ block content
         .container
           .portfolio-slider__wrap#portfolio-slider__wrap
             ul.portfolio-slider__list
-              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
-              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
-              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
-              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
-              +portfolio-slider__item('01', 'Boat Dream Wedding', 'Angeline’s SI ')
-              +portfolio-slider__item('02', 'Blue Dream Wedding', 'Ritz Charlton, Chicago ')
-              +portfolio-slider__item('03', 'Den & Anna Wedding', 'Garden Style ')
-              +portfolio-slider__item('04', 'Kelly & Victor', 'Ritz Charlton, Chicago')
-            .portfolio-slider__container
+              //begin portfolio-slider__item-01
+              li.portfolio-slider__item.portfolio-slider__item-01
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-01.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Boat Dream Wedding
+                    span.portfolio-slider__subtitle Angeline’s SI
+              //end portfolio-slider__item-01
+
+              //begin portfolio-slider__item-02
+              li.portfolio-slider__item.portfolio-slider__item-02
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-02.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Blue Dream Wedding
+                    span.portfolio-slider__subtitle Ritz Charlton, Chicago
+              //end portfolio-slider__item-02
+
+              //begin portfolio-slider__item-03
+              li.portfolio-slider__item.portfolio-slider__item-03
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-03.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Den & Anna Wedding
+                    span.portfolio-slider__subtitle Garden Style
+              //end portfolio-slider__item-03
+
+              //begin portfolio-slider__item-04
+              li.portfolio-slider__item.portfolio-slider__item-04
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-04.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Kelly & Victor
+                    span.portfolio-slider__subtitle Ritz Charlton, Chicago
+              //end portfolio-slider__item-04
+
+              //begin portfolio-slider__item-01
+              li.portfolio-slider__item.portfolio-slider__item-01
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-01.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Boat Dream Wedding
+                    span.portfolio-slider__subtitle Angeline’s SI
+              //end portfolio-slider__item-01
+
+              //begin portfolio-slider__item-02
+              li.portfolio-slider__item.portfolio-slider__item-02
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-02.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Blue Dream Wedding
+                    span.portfolio-slider__subtitle Ritz Charlton, Chicago
+              //end portfolio-slider__item-02
+
+              //begin portfolio-slider__item-03
+              li.portfolio-slider__item.portfolio-slider__item-03
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-03.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Den & Anna Wedding
+                    span.portfolio-slider__subtitle Garden Style
+              //end portfolio-slider__item-03
+
+              //begin portfolio-slider__item-04
+              li.portfolio-slider__item.portfolio-slider__item-04
+                a(href="#").portfolio-slider__link
+                  .portfolio-slider__link-circle
+                .portfolio-slider__pic
+                  img(src="assets/img/portfolio-slide/portfolio-slide-04.jpg" alt="portfolio")
+                  .portfolio-slider__text
+                    h3.portfolio-slider__title Kelly & Victor
+                    span.portfolio-slider__subtitle Ritz Charlton, Chicago
+              //end portfolio-slider__item-04
+
       //end portfolio__slider
 
       //begin portfolio__footer
@@ -76,7 +155,6 @@ block content
       startAt: 0,
       elasticBounds: 1,
       dragHandle: 1,
-      dynamicHandle: 1,
-      pauseOnHover: 1
+      dynamicHandle: 1
     });
 
