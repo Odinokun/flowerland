@@ -4,9 +4,13 @@ aside.aside
   include ../elements/burger
 
   .aside-contacts
-    a(href="tel:+13472726720").aside-contacts__icon
+    a(href="contacts.html").aside-contacts__icon.aside-contacts__icon--desktop
       +svg('phone')
-    a(href="mailto:info@flowerlanddecor.com").aside-contacts__icon
+    a(href="contacts.html").aside-contacts__icon.aside-contacts__icon--desktop
+      +svg('mail')
+    a(href="tel:+13472726720").aside-contacts__icon.aside-contacts__icon--mobile
+      +svg('phone')
+    a(href="mailto:info@flowerlanddecor.com").aside-contacts__icon.aside-contacts__icon--mobile
       +svg('mail')
     a(href="https://www.facebook.com/flowerlanddecor/" target="_blank" rel="nofollow noopener noreferrer").aside-contacts__icon
       +svg('fb')
