@@ -19,9 +19,11 @@
   @include max(960) {
     font-size: 60px;
   }
+
   @include max(650) {
     font-size: 50px;
   }
+
   @include max(425) {
     font-size: 40px;
   }
@@ -50,6 +52,16 @@
 }
 
 .project__text-block {
+  max-width: 93%;
+
+  @include max(760) {
+    max-width: 96%;
+  }
+
+  @include max(425) {
+    max-width: 100%;
+  }
+
   p {
     font-size: 15px;
     line-height: 27px;
@@ -76,12 +88,15 @@
     width: 45%;
     margin: 0 2% 40px 2%;
   }
+
   @include max(425) {
     width: 100%;
   }
+
   img {
     display: block;
     width: 100%;
+
     object-fit: cover;
   }
   &:hover {
