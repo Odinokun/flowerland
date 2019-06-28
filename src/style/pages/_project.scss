@@ -49,6 +49,10 @@
 .project__body {
   padding-top: 76px;
   padding-bottom: 100px;
+
+  @include max(425) {
+    padding-right: 5px;
+  }
 }
 
 .project__text-block {
@@ -91,6 +95,7 @@
 
   @include max(425) {
     width: 100%;
+    margin: 0 0 40px 0;
   }
 
   img {
