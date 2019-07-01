@@ -260,6 +260,27 @@ svg {
   overflow: visible;
 }
 
+// подсвечиваем картинки без alt
+// и без заполненного alt
+img[alt=''],
+img:not([alt]) {
+  outline: 5px solid tomato;
+}
+
+// исключение для google-map и fancybox
+.fancybox-container img[alt=''],
+.fancybox-container img:not([alt]),
+.gm-style img[alt=''],
+.gm-style img:not([alt]){
+  outline: none !important;
+}
+
+// тревога, если первый child внутри списка не li и прочие похожие примеры
+ul > *:not(li),
+ol > *:not(li) {
+  outline: 5px solid tomato;
+}
+
 //изменяем цвет выделения текста мышью
 ::selection {
   background-color: $brand;
@@ -290,9 +311,11 @@ svg {
   @include max(1300) {
     padding: 10px 30px 10px 160px;
   }
+
   @include max(1020) {
     padding: 10px 30px 10px 100px;
   }
+
   @include max(576) {
     padding: 10px 15px 10px 80px;
   }
@@ -309,6 +332,7 @@ svg {
   @include max(1020) {
     height: 50px;
   }
+
   @include max(576) {
     padding: 0 50px 0 20px;
   }
@@ -357,6 +381,7 @@ svg {
     @include max(1020) {
       line-height: 50px;
     }
+
     @include max(576) {
       font-size: 10px;
     }
