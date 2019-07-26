@@ -38,6 +38,7 @@
     padding-top: 0;
     padding-bottom: 30px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -49,10 +50,12 @@
   flex-direction: column;
   justify-content: center;
   max-width: 430px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 0;
 
   @include max(760) {
     max-width: 100%;
+    padding-top: 0;
   }
   p {
     font-size: 15px;
