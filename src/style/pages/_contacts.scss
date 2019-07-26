@@ -2,7 +2,6 @@
   .main {
     display: flex;
     flex-direction: column;
-    background-color: #d1e5e4;
     transition: .5s;
 
     @include max(425) {
@@ -130,7 +129,7 @@
   display: flex;
   min-height: 50vh;
   padding: 20px 0;
-  background-color: #d1e5e4;
+  background-color: #d5f5e6;
   .container {
     display: flex;
     justify-content: flex-start;

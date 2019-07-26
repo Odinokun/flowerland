@@ -16,15 +16,10 @@
 }
 
 .portfolio__header {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    @include max(760) {
-      flex-wrap: wrap;
-    }
+    flex-direction: column;
   }
 }
 
@@ -32,7 +27,7 @@
   font-size: 80px;
   line-height: 1;
   flex: none;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   padding-right: 30px;
   color: #2f2d2d;
 
@@ -49,12 +44,6 @@
 
 .portfolio__descr {
   width: 100%;
-  max-width: 570px;
-  padding-right: 50px;
-
-  @include max(1200) {
-    padding-right: 0;
-  }
 }
 
 .portfolio-slider {
@@ -194,6 +183,7 @@
   top: auto;
   bottom: 25px;
   left: 40px;
+  padding-right: 10px;
 }
 
 .portfolio-slider__title {
@@ -211,12 +201,10 @@
   color: #fff;
   &::before {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 6px;
     left: 0;
     width: 24px;
     height: 1px;
-    margin: auto;
     content: '';
     background-color: #fff;
   }

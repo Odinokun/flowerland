@@ -1,5 +1,5 @@
 .reviews-slider-sec {
-  background-color: rgba(209, 229, 228, .4);
+  background-color: #d5f5e6;
 }
 
 .reviews-slider-sec-header {
@@ -50,6 +50,7 @@
     background-color: #fff;
 
     will-change: transform;
+
     @include max(576) {
       transform: scale(1);
       opacity: 1;
@@ -69,6 +70,7 @@
     color: #2f2d2d;
 
     will-change: transform;
+
     @include max(576) {
       transform: scale(1);
     }
@@ -122,6 +124,7 @@
   @include max(576) {
     padding: 50px 0 30px 0;
   }
+
   blockquote {
     font-family: $font;
     font-size: 15px;
