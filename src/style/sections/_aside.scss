@@ -16,12 +16,12 @@
   }
 
   @include max(425) {
-    padding: 30px 5px 70px 5px;
+    padding: 30px 5px 120px 5px;
   }
 
-  @include maxHeight(740) {
-    padding: 30px 5px 70px 5px;
-  }
+  //@include maxHeight(740) {
+  //  padding: 30px 5px 70px 5px;
+  //}
 }
 
 .aside-contacts {

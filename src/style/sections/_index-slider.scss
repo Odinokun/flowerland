@@ -54,16 +54,20 @@
   position: absolute;
   top: 60px;
   left: 90px;
+
   @include max(1300) {
     left: 160px;
   }
+
   @include max(1020) {
     left: 105px;
   }
+
   @include max(576) {
     top: 20px;
     left: 80px;
   }
+
   @include maxHeight(740) {
     top: 20px;
     width: 155px;
@@ -73,13 +77,13 @@
       height: 75px;
     }
   }
+
   @include max(425) {
     width: 100px;
     svg {
       width: 100px;
     }
   }
-
   .logo-pic {
     fill: #d1e5e4;
   }
@@ -106,14 +110,17 @@
   width: 100%;
   margin-bottom: 70px;
   color: #fff;
+
   @include max(1020) {
     font-size: 50px;
     line-height: 50px;
   }
+
   @include max(576) {
     font-size: 40px;
     line-height: 40px;
   }
+
   @include maxHeight(650) {
     font-size: 50px;
     line-height: 50px;
@@ -157,29 +164,34 @@
   right: auto;
   left: 60px;
   transform: translateY(-50%);
+
   @include max(1020) {
     left: 23px;
   }
+
   @include maxHeight(840) {
-    top: 150px;
+    top: 0;
+    padding-top: 150px;
     transform: translateY(0%);
+    position: fixed;
   }
+
   @include maxHeight(580) {
     display: none;
   }
-
   li {
     width: 12px;
     height: 12px;
     margin: 0 0 35px 0;
     padding: 0;
+
     @include maxHeight(740) {
       margin: 0 0 25px;
     }
+
     @include maxHeight(650) {
       margin: 0 0 15px;
     }
-
     a {
       width: 12px;
       height: 12px;
@@ -228,11 +240,13 @@
     width: 50px;
     height: 50px;
     margin-right: 35px;
+
     @include max(576) {
       width: 35px;
       height: 35px;
       margin-right: 20px;
     }
+
     @include max(375) {
       width: 25px;
       height: 25px;
@@ -243,9 +257,11 @@
     font-family: $font-bsb;
     font-size: 35px;
     color: #2f2d2d;
+
     @include max(576) {
       font-size: 28px;
     }
+
     @include max(375) {
       font-size: 22px;
     }
@@ -269,6 +285,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
     @include max(425) {
       flex-direction: column;
       align-items: flex-start;
@@ -285,12 +302,14 @@
   display: flex;
   height: 240px;
   margin: auto;
+
   @include max(960) {
     top: auto;
     bottom: 60px;
     height: auto;
     padding-left: 60px;
   }
+
   @include max(425) {
     position: relative;
     top: 0;
@@ -304,29 +323,34 @@
   overflow: hidden;
   width: 100%;
   max-width: 240px;
+
   @include max(1680) {
     &:nth-child(4) {
       display: none;
     }
   }
+
   @include max(1300) {
     &:nth-child(3) {
       display: none;
     }
   }
+
   @include max(960) {
     &:nth-child(3),
     &:nth-child(4) {
       display: block;
     }
   }
+
   @include max(425) {
     width: 45%;
     margin-bottom: 20px;
   }
-
   img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
